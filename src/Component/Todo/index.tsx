@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./style.css";
-import TodoLogo from "../Assets/todo.svg";
+// import TodoLogo from "../Assets/todo.svg";
 import { TodoList } from "../../Types/Types";
 function Todo() {
   const [todoInput, setTodoInput] = useState<string>("");
