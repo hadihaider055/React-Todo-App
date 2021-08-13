@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Georama:wght@500;600;700&family=Roboto:ital,wght@0,500;0,700;0,900;1,700&display=swap");
+body {
+}
+.todo__container {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 800px;
+}
+.todo__badge {
+  width: 140px;
+}
+.header__todo__container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  width: 500px;
+}
+.header__heading {
+  margin: 0px 10px;
+  font-family: "Georama", sans-serif;
+  font-size: 23px;
+}
+.todo__input__div {
+  width: 100%;
+  margin-bottom: 40px;
+}
+.todo__input {
+  width: 80%;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  padding: 0px 20px;
+}
+.add__todo {
+  margin-left: -30px;
+  cursor: pointer;
+}
+.todo__item__div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 4px 5px 6px #b7b6b6;
+  padding: 0 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 30px;
+  background-color: rgba(162, 0, 162, 0.148);
+}
+.todo__item__div:hover {
+  transform: translateY(-15%);
+  transition: 0.8s all ease-in-out;
+  box-shadow: 0px 5px 6px #b7b6b6;
+}
+.todo__item__div {
+}
+.todo__task__name {
+  font-family: "Roboto", sans-serif;
+}
+
+.todo__task__edit {
+  color: rgb(12, 111, 12);
+  font-size: 18px;
+  margin-right: 20px;
+}
+.todo__task__del {
+  color: rgb(191, 0, 0);
+  font-size: 18px;
+}
+.todo__footer {
+  margin-top: 50px;
+}
