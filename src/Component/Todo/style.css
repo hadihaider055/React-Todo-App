@@ -5,6 +5,7 @@ body {
   margin: 0 auto;
   text-align: center;
   max-width: 800px;
+  margin-top: 10%;
 }
 .todo__badge {
   width: 140px;
@@ -12,8 +13,9 @@ body {
 .header__todo__container {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 80px;
-  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  max-width: 650px;
 }
 .header__heading {
   margin: 0px 10px;
@@ -39,7 +41,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 75%;
+  width: 79%;
   margin: 0 auto;
   box-shadow: 4px 5px 6px #b7b6b6;
   padding: 0 30px;
@@ -51,7 +53,7 @@ body {
 .todo__item__div:hover {
   transform: translateY(-15%);
   transition: 0.8s all ease-in-out;
-  box-shadow: 0px 5px 6px #b7b6b6;
+  box-shadow: 0px 5px 2px #888888;
 }
 .todo__item__div {
 }
@@ -70,4 +72,33 @@ body {
 }
 .todo__footer {
   margin-top: 50px;
+}
+.toggle__edit {
+  color: rgb(12, 111, 12);
+}
+.button__remove__all {
+  background-color: rgba(162, 0, 162, 0.148);
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 2px 4px 6px #7b7b7b;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.button__remove__all > i {
+  font-size: 14px;
+  margin-left: 10px;
+}
+button:focus {
+  outline: none;
+}
+button:active {
+  outline: none;
+  background-color: rgba(196, 22, 196, 0.203);
 }
