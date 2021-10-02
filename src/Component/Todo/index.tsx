@@ -10,7 +10,7 @@ function Todo() {
   const [isEdit, setIsEdit] = useState<string>("");
 
   const handleAdd = () => {
-    if (todoInput === "" || todoInput === " ") {
+    if (!todoInput) {
       alert("Fill the field");
     } else {
       const allTodoItems = {
@@ -45,7 +45,7 @@ function Todo() {
   };
 
   const handleToggleEdit = () => {
-    if (todoInput === "" || todoInput === " ") {
+    if (!todoInput) {
       alert("Fill the field");
     } else if (todoInput !== "") {
       setTodoItemList(
@@ -59,6 +59,8 @@ function Todo() {
         })
       );
     }
+    setTodoInput("");
+    setShowToggleBtn(false);
   };
 
   useEffect(() => {
