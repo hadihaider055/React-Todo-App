@@ -1,6 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Georama:wght@500;600;700&family=Roboto:ital,wght@0,500;0,700;0,900;1,700&display=swap");
-body {
-}
 .todo__container {
   margin: 0 auto;
   text-align: center;
@@ -55,8 +53,6 @@ body {
   transition: 0.8s all ease-in-out;
   box-shadow: 0px 5px 2px #888888;
 }
-.todo__item__div {
-}
 .todo__task__name {
   font-family: "Roboto", sans-serif;
 }
@@ -101,4 +97,7 @@ button:focus {
 button:active {
   outline: none;
   background-color: rgba(196, 22, 196, 0.203);
+}
+.account__header {
+  display: flex;
 }

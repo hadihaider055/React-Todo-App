@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from "react";
 import "./style.css";
-// import TodoLogo from "../Assets/todo.svg";
 import { TodoList } from "../../Types/Types";
+import LoginModal from "../Login";
+import Button from "@mui/material/Button";
+
 function Todo() {
-  const [todoInput, setTodoInput] = useState<string>("");
+  const [todoInput, setTodoInput] = useState("");
   const [todoItemList, setTodoItemList] = useState<TodoList[]>([]);
-  const [todoList, setTodoList] = useState<boolean>(false);
-  const [showToggleBtn, setShowToggleBtn] = useState<boolean>(false);
-  const [isEdit, setIsEdit] = useState<string>("");
+  const [todoList, setTodoList] = useState<Boolean>(false);
+  const [showToggleBtn, setShowToggleBtn] = useState<Boolean>(false);
+  const [isEdit, setIsEdit] = useState<String>("");
+  const [account, setAccount] = useState<Object>(
+    JSON.parse(localStorage.getItem("user") || "{}")
+  );
 
   const handleAdd = () => {
     if (!todoInput) {
@@ -71,12 +76,24 @@ function Todo() {
     }
   }, [todoItemList]);
 
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    window.location.reload();
+  };
+
   return (
     <div className="todo__container">
-      {/* <img src={TodoLogo} alt="Todo App" className="todo__badge" /> */}
       <div className="header__todo__container">
         <h2 className="header__heading">React Todo Application📝</h2>
-        <button>Sign In</button>
+        {Object.keys(account).length > 0 ? (
+          <Button onClick={handleLogout}>Logout</Button>
+        ) : (
+          <div className="account__header">
+            <LoginModal FormName="Sign up" />
+            <hr />
+            <LoginModal FormName="Login" />
+          </div>
+        )}
       </div>
       <div className="todo__input__div">
         <input
